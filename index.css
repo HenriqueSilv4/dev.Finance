@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: min(90vh, 800px);
+    margin: auto;
+}
+
+body{
+    background: rgba(35, 35, 35, 0.3);
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+}
+
+/* BUTTONS ======== BUTTONS =========== BUTTONS */
+
+a {
+    color:green;
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(11, 197, 11);
+}
+
+.button.new{
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background: green;
+    padding: 0;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background: greenyellow;
+}
+
+.button.cancel{
+    color: red;
+    border: 2px red solid;
+    border-radius: 0.2rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.button.cancel:hover{
+    opacity: 1;
+}
+
+
+/* HEADER ======== HEADER =========== HEADER */
+
+header{
+    background: dodgerblue;
+    padding: 2rem 0 12rem;
+    text-align: center;
+}
+
+header h1{
+    color:white;
+    font-weight: 300;
+}
+
+/* BALANCE ======== BALANCE =========== BALANCE */
+
+#balance{
+    margin-top: -8rem;
+}
+
+#balance h2{
+    color: rgb(32, 57, 138);
+    margin-top: 0rem;
+}
+
+/* CARDS ======== CARDS =========== CARDS */
+
+.cards{
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    color: rgb(32, 57, 138);
+    margin-bottom: 2rem;
+}
+
+.cards h3{
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards p{
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.cards.total{
+    background: rgb(71, 218, 71);
+    color: white;
+}
+
+/* TABLE ======== TABLE =========== TABLE */
+
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#datatable{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color:black;
+}
+
+table th{
+    background: white;
+    opacity: 0.6;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table td{
+    background: white;
+    opacity: 0.8;
+    padding: 1rem 2rem;
+}
+
+table tbody tr{
+    opacity: 0.7;
+}
+
+table tbody tr:hover{
+    opacity: 1;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+
+td.description{
+    color:black;
+}
+
+td.income{
+    color:black;
+}
+
+td.date{
+    color:black;
+}
+
+/* MODAL ======== MODAL =========== MODAL */
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background-color: antiquewhite;
+    padding: 2.4rem;
+    position: relative;
+    color: black;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1;
+}
+
+
+/* FORM ======== FORM =========== FORM */
+
+#form{
+    max-width: 500px;
+}
+
+#form h2{
+    margin-top: 0;
+}
+
+input{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.input-group{
+    margin-top: 0.8rem;
+}
+
+.input-group small{
+    opacity: 0.5;
+}
+
+.input-group.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button{
+    width: 50%;
+}
+
+
+/* FOOTER ======== FOOTER =========== FOOTER */
+
+footer{
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: blueviolet;
+    opacity: 0.8;
+}
+
+/* RESPONSIVO ======== RESPONSIVO =========== RESPONSIVO */
+
+html{
+    font-size: 15px;
+}
+
+@media (min-width: 800px){
+    html{
+        font-size: 14px;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+}
+
