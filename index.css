@@ -5,7 +5,7 @@
 }
 
 .container{
-    width: min(90vh, 800px);
+    max-width: 900px;
     margin: auto;
 }
 
@@ -35,13 +35,23 @@ h2{
 
 /* BUTTONS ======== BUTTONS =========== BUTTONS */
 
-a {
-    color:green;
+a{
     text-decoration: none;
 }
 
-a:hover {
-    color:rgb(11, 197, 11);
+a.button.new{
+    color:green;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 500ms;
+    border-radius: 1rem;
+}
+
+a:hover , a:focus{
+    color: black;
+    background-color: white;
+    border-radius: 1rem;
+    font-weight: 500;
 }
 
 .button.new{
@@ -82,9 +92,10 @@ button:hover{
 /* HEADER ======== HEADER =========== HEADER */
 
 header{
-    background: dodgerblue;
+    background: rgb(30 97 119);
     padding: 2rem 0 10rem;
     text-align: center;
+    width: 100%;
 }
 
 header img{
@@ -94,6 +105,8 @@ header img{
 /* BALANCE ======== BALANCE =========== BALANCE */
 
 #balance{
+    display: flex;
+    justify-content: space-between;
     margin-top: -5rem;
 }
 
@@ -110,6 +123,7 @@ header img{
     border-radius: 0.25rem;
     color: rgb(32, 57, 138);
     margin-bottom: 2rem;
+    width: 280px;
 }
 
 .cards h3{
@@ -121,8 +135,8 @@ header img{
 }
 
 .cards p{
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: 24px;
     line-height: 3rem;
     margin-top: 1rem;
 }
@@ -259,6 +273,8 @@ input{
 
 .input-group.actions .button,
 .input-group.actions button{
+    font-size: 15px;
+    font-weight: 600;
     width: 48%;
 }
 
@@ -273,55 +289,55 @@ footer{
 
 /* RESPONSIVO ======== RESPONSIVO =========== RESPONSIVO */
 
-html{
-    font-size: 15px;
-}
-
-@media (min-width: 800px){
-
-    html{
-        font-size: 14px;
-    }
+@media (max-width: 1000px){
 
     #balance {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);  
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
 
-@media (min-width: 800px){
+@media (max-width: 800px){
 
-    html{
-        font-size: 14px;
+    .cards{
+        width: 600px;
     }
 
-    #balance {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);  
-        gap: 2rem;
+    #transaction{
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
 
+@media (max-width: 700px){
 
-@media(max-width: 425px) {
-
-    body{
-        justify-content: space-around;
-        align-items: center;
-        width: 200%;
+    .cards{
+        width: 500px;
     }
 
- }
-
- @media(max-width: 375px) {
-
-    body{
-        justify-content: space-around;
-        align-items: center;
-        width: 250%;
+    #transaction{
+        width: 500px;
     }
 
- }
+}
+
+@media (max-width: 500px){
+
+    .cards{
+        width: 300px;
+    }
+
+    #transaction{
+        width: 300px;
+    }
+
+}
