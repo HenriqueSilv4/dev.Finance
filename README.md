@@ -20,7 +20,7 @@ A estilização está responsiva em diferentes resoluções tanto para desktop/m
 
 # Como rodar
 
-A nossa aplicação está disponível na plataforma Netlify
+A nossa aplicação está disponível na plataforma [Netlify](https://henrique-silva-dev-finance.netlify.app/)
 
 ---
 
