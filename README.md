@@ -1,4 +1,6 @@
-# 📚 Projeto
+<h1 align="center">
+  📚 Projeto
+</h1>
 
 O dev.finance é uma aplicação de controle financeiro, onde é possível cadastrar e excluir transações e ver o saldo de entrada e saída 💰
 
